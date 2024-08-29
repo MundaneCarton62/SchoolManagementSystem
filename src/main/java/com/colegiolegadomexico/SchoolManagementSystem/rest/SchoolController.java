@@ -25,11 +25,11 @@ public class SchoolController {
         return "staff";
     }
 
-//    @GetMapping("/students")
-//    public String showSystems(){
-//
-//        return "students";
-//    }
+    @GetMapping("/colegiolegadomexico/students")
+    public String showSystems(){
+
+        return "students";
+    }
 
     // You can create other methods here if needed
 }
