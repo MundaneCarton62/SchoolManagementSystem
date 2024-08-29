@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+<head>
+    <title>School Management System</title>
+</head>
+<body>
+
+<h1>School Management System</h1>
+
+<!-- display username and role -->
+<p>
+    User : <span sec:authentication="principal.username"></span>
+    <br><br>
+    Role(s) : <span sec:authentication="principal.authorities"></span>
+</p>
+
+
+
+<p>Click the button to go to the staff management page.</p>
+<button th:onclick="|window.location.href='@{/colegiolegadomexico/staff}';|">Go to Staff</button>
+
+
+<hr>
+<!-- Add logout button -->
+<form action="#" th:action="@{/logout}" method="post">
+    <input type="submit" value="Logout"/>
+</form>
+</body>
+</html>
